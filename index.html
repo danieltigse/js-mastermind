@@ -23,196 +23,115 @@
   
   <div class="wrapper">
     <header>
-      <h1>Mastermind</h1>
-      <button id="newGame" class="green">Restart</button>
+      <h1>CRIPTO<br/>MASTER</h1>
     </header>
     <div class="container">
-      <div id="guesses">
-        <div class="code row">
-          <div class="secret socket">?</div>
-          <div class="secret socket">?</div>
-          <div class="secret socket">?</div>
-          <div class="secret socket">?</div>
+      <div class="pretty_container container_leaderboard">
+        <div class="title_bar">
+          <h2>LEADERBOARD</h2>
         </div>
-        <div class="guess">
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-        </div>
-        <div class="guess">
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-        </div>
-        <div class="guess">
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-        </div>
-        <div class="guess">
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-        </div>
-        <div class="guess">
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-        </div>
-        <div class="guess">
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-        </div>
-        <div class="guess">
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-        </div>
-        <div class="guess">
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-          <div class="socket"></div>
-        </div>
-      </div>
+        <div class="leaderboard">
 
-      <div id="hints">
-        <div class="hint">
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
+          <div class="container-play">
+            <img src="img/Play again@2x.png" width="60">
           </div>
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
+
+          <div class="position-board">
+            <div class="container-img">
+              <img src="img/Button 1@2x.png" class="img-leaderboard">
+            </div>
+            <div class="container-info">
+              <div class="info-title">
+                <span class="leader-name" id="top-1-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
+                <span id="top-1-time">0:30</span>
+              </div>
+              <div class="info-subtitle">
+                <img src="img/Mark@2x.png" width="20">
+                <span class="subtitle-leader">CRIPTOMASTER</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="hint">
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
+          <div class="divider"></div>
+
+          <div class="position-board">
+            <div class="container-img">
+              <img src="img/Button 2@2x.png" class="img-leaderboard">
+            </div>
+            <div class="container-info">
+              <div class="info-title">
+                <span class="leader-name" id="top-2-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
+                <span id="top-2-time">0:30</span>
+              </div>
+              <div class="info-subtitle">
+                <img src="img/Mark@2x.png" width="20">
+                <span class="subtitle-leader">CRIPTOMANIAC</span>
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
+          <div class="divider"></div>
+
+          <div class="position-board">
+            <div class="container-img">
+              <img src="img/Button 3@2x.png" class="img-leaderboard">
+            </div>
+            <div class="container-info">
+              <div class="info-title">
+                <span class="leader-name" id="top-3-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
+                <span id="top-3-time">0:30</span>
+              </div>
+              <div class="info-subtitle">
+                <img src="img/Mark@2x.png" width="20">
+                <span class="subtitle-leader">CRIPTOWIN</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="hint">
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
+          <div class="divider"></div>
+
+          <div class="position-board">
+            <div class="container-img">
+              <img src="img/Button 4@2x.png" class="img-leaderboard">
+            </div>
+            <div class="container-info">
+              <div class="info-title">
+                <span class="leader-name" id="top-4-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
+                <span id="top-4-time">0:30</span>
+              </div>
+              <div class="info-subtitle">
+                <img src="img/Mark@2x.png" width="20">
+                <span class="subtitle-leader">CRIPTOCOOL</span>
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
+          <div class="divider"></div>
+
+          <div class="position-board">
+            <div class="container-img">
+              <img src="img/Button 5@2x.png" class="img-leaderboard">
+            </div>
+            <div class="container-info">
+              <div class="info-title">
+                <span class="leader-name" id="top-5-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
+                <span id="top-5-time">0:30</span>
+              </div>
+              <div class="info-subtitle">
+                <img src="img/Mark@2x.png" width="20">
+                <span class="subtitle-leader">CRIPTOMEH</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="hint">
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-        </div>
-        <div class="hint">
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-        </div>
-        <div class="hint">
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-        </div>
-        <div class="hint">
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-        </div>
-        <div class="hint">
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
-          <div class="row">
-            <div class="js-hint-socket socket"></div>
-            <div class="js-hint-socket socket"></div>
-          </div>
+
         </div>
       </div>
     </div>
-
-    <div id="instructions">
-      <h3>How to play</h3>
-      <p><strong>Goal:</strong> Guess the pattern, in both order and color</p>
-      <p>Insert your guess sequence into the empty sockets</p>
-      <p>Feedback is provided on the right side in the form of black and white pegs.
-        <ul>
-          <li>Black peg corresponds to one peg from your color sequence that is both the right color and in the right position</li>
-          <li>White peg corresponds to one peg from your color sequence that is the right color but NOT in the right position</li>
-        </ul>
-      </p>
-    </div>
-    
-    <div id="options" class="container">
-      <button value="1" id="green" class="option green"></button>
-      <button value="2" id="purple" class="option purple"></button>
-      <button value="3" id="red" class="option red"></button>
-      <button value="4" id="yellow" class="option yellow"></button>
-      <button value="5" id="blue" class="option blue"></button>
-      <button value="6" id="brown" class="option brown"></button>
-      <button id="delete" class="">&#8672;</button>
-    </div>
+    <footer>
+      <p><small>Built with <a href="#" target="_blank">klomontes</a> by &#9829</small></p>
+    </footer>
   </div>
-
-  <div id="modalOverlay">
-    <div id="modalMessage">
-      <button class="large">OK</button>
-      <button class="large primary">Restart</button>
-    </div>
-  </div>
-
-  <footer>
-    <p><small>Built with <a href="https://github.com/klomontes" target="_blank">klomontes</a> by &#9829</small></p>
-  </footer>
-
-  <script src="js/main.js"></script>
 
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-58209103-1', 'auto');
-    ga('send', 'pageview');
-
+    document.getElementsByClassName('container-play')[0].onclick = function(){
+      window.location.href = "new_email.html";
+    };
   </script>
 
 </body>
