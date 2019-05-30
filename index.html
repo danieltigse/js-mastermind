@@ -9,6 +9,7 @@
   <title>JS Mastermind</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,800italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
@@ -124,7 +125,7 @@
       </div>
     </div>
     <footer>
-      <p><small>Built with <a href="#" target="_blank">klomontes</a> by &#9829</small></p>
+      <p><small>Built with <a id="hidden_full" href="#" target="_blank">klomontes</a> by &#9829</small></p>
     </footer>
   </div>
 
@@ -138,6 +139,39 @@
         return valString;
       }
     }
+
+    function _toggleFullScreen() {
+      if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement) {
+        if (document.cancelFullScreen) {
+          document.cancelFullScreen();
+        } else {
+          if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else {
+            if (document.webkitCancelFullScreen) {
+              document.webkitCancelFullScreen();
+            }
+          }
+        }
+      } else {
+        const _element = document.documentElement;
+        if (_element.requestFullscreen) {
+          _element.requestFullscreen();
+        } else {
+          if (_element.mozRequestFullScreen) {
+            _element.mozRequestFullScreen();
+          } else {
+            if (_element.webkitRequestFullscreen) {
+              _element.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+            }
+          }
+        }
+      }
+    }
+
+    document.getElementById('hidden_full').onclick = function(){
+      _toggleFullScreen();
+    };
     
     document.getElementsByClassName('container-play')[0].onclick = function(){
       window.location.href = "new_email.html";
