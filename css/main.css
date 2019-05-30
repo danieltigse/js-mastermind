@@ -129,7 +129,7 @@ h1 {
   margin-right: 10px;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.7em;
+  font-size: 3.0em;
 }
 
 .wrapper {
@@ -140,7 +140,7 @@ h1 {
 
 header {
   display: block;
-  padding-top: 20px;
+  padding-top: 100px;
   padding-bottom: 20px;
   text-align: center;
 }
@@ -481,7 +481,7 @@ footer p{
   line-height: 0;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .wrapper,
   .container {
     width: 100%;
@@ -508,7 +508,7 @@ footer p{
   .option {
     margin-right: 0;
   }
-}
+} */
 
 
 /* ==========================================================================
@@ -714,7 +714,7 @@ clear: both;
 /************* Leaderboard *************/
 
 .container_leaderboard{
-  width: 300px;
+  width: 400px;
 }
 
 .title_bar{
@@ -749,8 +749,8 @@ clear: both;
 }
 
 .img-leaderboard{
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 
 .subtitle-leader{
@@ -782,8 +782,8 @@ clear: both;
 .container-play{
   cursor: pointer;
   position: absolute;
-  bottom: 8px;
-  right: 150px;
+  bottom: 0px;
+  right: 98px;
 }
 
 .divider{
@@ -823,8 +823,8 @@ clear: both;
 /******** NEW EMAIL **********/
 
 .img-back{
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin: 26px;
 }
 
@@ -853,7 +853,8 @@ clear: both;
 }
 
 .container_bars{
-  padding-bottom: 190px;
+  padding-top: 20px;
+  padding-bottom: 270px;
 }
 
 .cien{
@@ -873,11 +874,11 @@ clear: both;
 }
 
 .container_fail{
-  padding: 95px 60px;
+  padding: 120px 60px;
 }
 
 .container_win{
-  padding: 120px 60px;
+  padding: 150px 60px;
 }
 
 .container_fail h2{
@@ -887,27 +888,27 @@ clear: both;
 .container-next{
   cursor: pointer;
   position: absolute;
-  bottom: -24px;
+  bottom: -32px;
   right: 150px;
   left: 160px;
 }
 
 .container_popover{
-  width: 308px;
-  height: 525px;
+  width: 408px;
+  height: 671px;
   background: #ffffffd6;
   position: absolute;
   top: 0;
-  left: 251px;
+  left: 202px;
   border-radius: 25px;
   display: none;
 }
 
 .container_locks{
   background: #42454a;
-  width: 220px;
+  width: 250px;
   padding: 20px 0px 40px 0px;
-  margin-top: 150px;
+  margin-top: 180px;
   -webkit-animation: bounceIn .4s;
   -o-animation: bounceIn .4s;
   animation: bounceIn .4s;
@@ -920,7 +921,7 @@ clear: both;
 .container-timer{
   background: #3a3c3f;
   border-radius: 10px;
-  width: 100px;
+  width: 120px;
   margin: 0 auto;
   padding: 5px 10px;
   display: flex;

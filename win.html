@@ -56,7 +56,7 @@
           <img class="img-locks" src="img/Lock 3@2x.png"/>
           <h2 class="title-timer">TU TIEMPO</h2>
           <div class="container-timer">
-            <img src="img/Clock@2x.png" width="20" height="20"/>
+            <img src="img/Clock@2x.png" width="30" height="30"/>
             <span id="timer-win">00:00</span>
           </div>
           <div class="container-name">
@@ -105,24 +105,9 @@
         return;
       }
 
-      let position = 5;
-      if(seconds < 120){//2m
-        position = 1;
-      }
-      else if(seconds < 360){//6m
-        position = 2;
-      }
-      else if(seconds < 480){//8m
-        position = 3;
-      }
-      else if(seconds < 600){//10m
-        position = 4;
-      }
-      
       const winner = {
         name,
-        seconds,
-        position
+        seconds
       }
       saveWinner(winner);
 
@@ -132,9 +117,11 @@
     function saveWinner(winner){
       let winners = JSON.parse(localStorage.getItem('winners'));
       if(!winners){
-        winners = {};
+        winners = [];
       }
-      winners[winner.position] = winner;
+      
+      winners.splice(0, 0, winner);
+      winners.sort((a,b)=> a.seconds - b.seconds);
       localStorage.setItem('winners', JSON.stringify(winners))
     }
 

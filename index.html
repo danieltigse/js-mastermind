@@ -33,7 +33,7 @@
         <div class="leaderboard">
 
           <div class="container-play">
-            <img src="img/Play again@2x.png" width="60">
+            <img src="img/Play again@2x.png" width="80">
           </div>
 
           <div class="position-board">
@@ -146,29 +146,29 @@
     const winners = JSON.parse(localStorage.getItem('winners'));
     if(winners){
     
-      if(winners[1]){
-        document.getElementById('top-1-name').innerHTML = winners[1].name;
-        const totalSeconds = winners[1].seconds;
+      if(winners[0]){
+        document.getElementById('top-1-name').innerHTML = winners[0].name;
+        const totalSeconds = winners[0].seconds;
         document.getElementById('top-1-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
       }
-      if(winners[2]){
-        document.getElementById('top-2-name').innerHTML = winners[2].name;
-        const totalSeconds = winners[2].seconds;
+      if(winners[1]){
+        document.getElementById('top-2-name').innerHTML = winners[1].name;
+        const totalSeconds = winners[1].seconds;
         document.getElementById('top-2-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
       }
-      if(winners[3]){
-        document.getElementById('top-3-name').innerHTML = winners[3].name;
-        const totalSeconds = winners[3].seconds;
+      if(winners[2]){
+        document.getElementById('top-3-name').innerHTML = winners[2].name;
+        const totalSeconds = winners[2].seconds;
         document.getElementById('top-3-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
       }
-      if(winners[4]){
-        document.getElementById('top-4-name').innerHTML = winners[4].name;
-        const totalSeconds = winners[4].seconds;
+      if(winners[3]){
+        document.getElementById('top-4-name').innerHTML = winners[3].name;
+        const totalSeconds = winners[3].seconds;
         document.getElementById('top-4-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
       }
-      if(winners[5]){
-        document.getElementById('top-5-name').innerHTML = winners[5].name;
-        const totalSeconds = winners[5].seconds;
+      if(winners[4]){
+        document.getElementById('top-5-name').innerHTML = winners[4].name;
+        const totalSeconds = winners[4].seconds;
         document.getElementById('top-5-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
       }
 
