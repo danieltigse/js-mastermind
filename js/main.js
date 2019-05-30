@@ -180,17 +180,17 @@
 
   function gameState (state) {
     gameOver();
-    //if (state === 'won') {
+    if (state === 'won') {
       localStorage.setItem('last_time', totalSeconds);
       setTimeout(function(){ 
         window.location.href = "win.html";
       }, 2000);
-    //}
-    // else{
-    //   setTimeout(function(){ 
-    //     window.location.href = "fail.html";
-    //   }, 2000);
-    // }
+    }
+    else{
+      setTimeout(function(){ 
+        window.location.href = "fail.html";
+      }, 2000);
+    }
   }
 
   gameSetup(); // Run the game
