@@ -42,8 +42,8 @@
             </div>
             <div class="container-info">
               <div class="info-title">
-                <span class="leader-name" id="top-1-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
-                <span id="top-1-time">0:30</span>
+                <span class="leader-name" id="top-1-name">DANIEL TIGSE</span>
+                <span id="top-1-time">0:28</span>
               </div>
               <div class="info-subtitle">
                 <img src="img/Mark@2x.png" width="20">
@@ -59,8 +59,8 @@
             </div>
             <div class="container-info">
               <div class="info-title">
-                <span class="leader-name" id="top-2-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
-                <span id="top-2-time">0:30</span>
+                <span class="leader-name" id="top-2-name">MAYER MIZRACHI</span>
+                <span id="top-2-time">2:30</span>
               </div>
               <div class="info-subtitle">
                 <img src="img/Mark@2x.png" width="20">
@@ -76,8 +76,8 @@
             </div>
             <div class="container-info">
               <div class="info-title">
-                <span class="leader-name" id="top-3-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
-                <span id="top-3-time">0:30</span>
+                <span class="leader-name" id="top-3-name">THANOS</span>
+                <span id="top-3-time">6:10</span>
               </div>
               <div class="info-subtitle">
                 <img src="img/Mark@2x.png" width="20">
@@ -93,8 +93,8 @@
             </div>
             <div class="container-info">
               <div class="info-title">
-                <span class="leader-name" id="top-4-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
-                <span id="top-4-time">0:30</span>
+                <span class="leader-name" id="top-4-name">IPAMBE</span>
+                <span id="top-4-time">8:40</span>
               </div>
               <div class="info-subtitle">
                 <img src="img/Mark@2x.png" width="20">
@@ -110,8 +110,8 @@
             </div>
             <div class="container-info">
               <div class="info-title">
-                <span class="leader-name" id="top-5-name">DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE DANIEL TIGSE</span>
-                <span id="top-5-time">0:30</span>
+                <span class="leader-name" id="top-5-name">RAUL MOSTAZA</span>
+                <span id="top-5-time">15:55</span>
               </div>
               <div class="info-subtitle">
                 <img src="img/Mark@2x.png" width="20">
@@ -129,9 +129,51 @@
   </div>
 
   <script>
+
+    function pad(val) {
+      var valString = val + "";
+      if (valString.length < 2) {
+        return "0" + valString;
+      } else {
+        return valString;
+      }
+    }
+    
     document.getElementsByClassName('container-play')[0].onclick = function(){
       window.location.href = "new_email.html";
     };
+
+    const winners = JSON.parse(localStorage.getItem('winners'));
+    if(winners){
+    
+      if(winners[1]){
+        document.getElementById('top-1-name').innerHTML = winners[1].name;
+        const totalSeconds = winners[1].seconds;
+        document.getElementById('top-1-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
+      }
+      if(winners[2]){
+        document.getElementById('top-2-name').innerHTML = winners[2].name;
+        const totalSeconds = winners[2].seconds;
+        document.getElementById('top-2-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
+      }
+      if(winners[3]){
+        document.getElementById('top-3-name').innerHTML = winners[3].name;
+        const totalSeconds = winners[3].seconds;
+        document.getElementById('top-3-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
+      }
+      if(winners[4]){
+        document.getElementById('top-4-name').innerHTML = winners[4].name;
+        const totalSeconds = winners[4].seconds;
+        document.getElementById('top-4-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
+      }
+      if(winners[5]){
+        document.getElementById('top-5-name').innerHTML = winners[5].name;
+        const totalSeconds = winners[5].seconds;
+        document.getElementById('top-5-time').innerHTML = `${pad(parseInt(totalSeconds / 60))}:${pad(totalSeconds % 60)}`
+      }
+
+    }
+
   </script>
 
 </body>

@@ -23,6 +23,7 @@
   var minutesLabel = document.getElementById("minutes");
   var secondsLabel = document.getElementById("seconds");
   var totalSeconds = 0;
+  var refreshIntervalId = 0;
 
   function gameSetup () {
     generateSecretCode(1, 7);
@@ -35,7 +36,7 @@
     document.getElementById('delete').onclick = deleteLast;
 
     totalSeconds = 0;
-    setInterval(setTime, 1000);
+    refreshIntervalId = setInterval(setTime, 1000);
   }
 
   function setTime() {
@@ -174,21 +175,22 @@
       options[i].removeEventListener('click', insertGuess, false);
 
     revealCode();
+    clearInterval(refreshIntervalId);
   }
 
   function gameState (state) {
     gameOver();
-    document.getElementsByTagName('body')[0].className = state;
-    modalOverlay.className = state;
-
-    if (state === 'won') {
-      modalMessage.innerHTML = '<h2>You cracked the code!</h2> <p>Great! You are awesome! You should feel good now...</p> <button class="large" id="hideModal">OK</button> <button id="restartGame" class="large primary">Restart</button>';
-      document.getElementById('restartGame').onclick = newGame;
-      document.getElementById('hideModal').onclick = hideModal;
-    } else
-      modalMessage.innerHTML = '<h2>You failed...</h2> <p>What a shame... Look on the bright side - you weren\'t even close.</p> <button class="large" id="hideModal">OK</button> <button id="restartGame" class="large primary">Restart</button>';
-      document.getElementById('restartGame').onclick = newGame;
-      document.getElementById('hideModal').onclick = hideModal;
+    //if (state === 'won') {
+      localStorage.setItem('last_time', totalSeconds);
+      setTimeout(function(){ 
+        window.location.href = "win.html";
+      }, 2000);
+    //}
+    // else{
+    //   setTimeout(function(){ 
+    //     window.location.href = "fail.html";
+    //   }, 2000);
+    // }
   }
 
   gameSetup(); // Run the game
